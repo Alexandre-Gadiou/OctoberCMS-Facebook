@@ -11,7 +11,7 @@ This OctoberCMS plugin enables to include facebook components in your site.
 - page box
 
 You can also configure in October CMS settings your facebook page URL. 
-This facebook plugin takes by default the URL provided in the settings for components..
+This facebook plugin takes by default the URL provided in the settings for components.
 
 
 Installation
@@ -36,7 +36,7 @@ Prerequisite
 Before adding components to your pages, you need to configure your theme by adding at the bottom of each page 
 the javascript code (Facebook SDK) below. 
 
-
+```
 <div id="fb-root"></div>
 <script>(function(d, s, id) {
   var js, fjs = d.getElementsByTagName(s)[0];
@@ -45,6 +45,7 @@ the javascript code (Facebook SDK) below.
   js.src = "//connect.facebook.net/{{YOUR_LANGUAGE}}/sdk.js#xfbml=1&version=v2.3";
   fjs.parentNode.insertBefore(js, fjs);
 }(document, 'script', 'facebook-jssdk'));</script>
+```
 
 Replace the variable {{YOUR_LANGUAGE}} by your language (en for english)
 
