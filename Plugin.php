@@ -20,7 +20,7 @@ class Plugin extends PluginBase
         return [
             'name' => 'Facebook Components',
             'description' => 'Facebook components for October CMS',
-            'author' => 'Alexander GADIOU',
+            'author' => 'Alexandre GADIOU',
             'homepage' => 'http://alexandre-gadiou.appspot.com',
             'icon' => 'icon-facebook-official'
         ];
