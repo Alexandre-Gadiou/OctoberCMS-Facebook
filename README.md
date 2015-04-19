@@ -1,10 +1,22 @@
 OctoberCMS Facebook Plugin
-==================================
+==========================
 
-========== INSTALLATION ==========
+This OctoberCMS plugin enables to include facebook components in your site.
 
+- like button
+- share button
+- follow button
+- link button
+- send button
+- page box
+
+You can also configure in October CMS settings your facebook page URL. 
+This facebook plugin takes by default the URL provided in the settings for components..
+
+
+Installation
+------------
 2 methods exist to install this plugin
-
 
 1) Install from github
 
@@ -13,21 +25,13 @@ OctoberCMS Facebook Plugin
 - Open October CMS settings in the backend GUI (http://localhost:8080/backend/system/updates)
 - Click on Check for updates and force to update.
 
-
 2) Install with October CMS backend GUI
 
 - Type in the search input : Algad.Facebook, then install the plugin
 
 
-========== PLUGIN INFO ==========
-
-After the installation process, you will find new facebook components in your CMS area.
-It can be added to any page, layout or partial ... 
-
-The integration works via the following code:
-
-{% component 'alias' %}
-
+Prerequisite
+------------
 
 Before adding components to your pages, you need to configure your theme by adding at the bottom of each page 
 the javascript code (Facebook SDK) below. 
@@ -42,15 +46,17 @@ the javascript code (Facebook SDK) below.
   fjs.parentNode.insertBefore(js, fjs);
 }(document, 'script', 'facebook-jssdk'));</script>
 
-
 Replace the variable {{YOUR_LANGUAGE}} by your language (en for english)
 
-You can also configure in October CMS settings your facebook page URL. 
-This facebook plugin takes by default the URL provided in the settings for components : 
+Usage
+-----
+After the installation process, you will find new facebook components in your CMS area.
+It can be added to any page, layout or partial ... 
 
-- like button
-- share button
-- follow button
-- link button
-- send button
-- page box
+The integration works via the following code:
+
+{% component 'alias' %}
+
+
+
+
