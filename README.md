@@ -56,7 +56,9 @@ It can be added to any page, layout or partial ...
 
 The integration works via the following code:
 
+```
 {% component 'alias' %}
+```
 
 
 
