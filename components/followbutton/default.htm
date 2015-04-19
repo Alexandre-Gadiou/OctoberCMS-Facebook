@@ -1,0 +1,31 @@
+{% if not (__SELF__.options['facebook_page_url'] is empty) %}
+{% set facebook_page_url = __SELF__.options['facebook_page_url'] %}
+{% else %}
+{% set facebook_page_url = __SELF__.faceBookPage %}
+{% endif %}
+
+{% set layout = __SELF__.options['layout'] %}
+{% set color = __SELF__.options['color'] %}
+
+{% if __SELF__.options['show_faces'] %}
+{% set show_faces = 'true' %}
+{% else %}
+{% set show_faces = 'false' %}
+{% endif %}
+
+{% if not (__SELF__.options['custom_css'] is empty) %}
+{% set custom_css = __SELF__.options['custom_css'] %}
+{% else %}
+{% set custom_css = '' %}
+{% endif %}
+
+{% if not (facebook_page_url is empty) %}
+<div class="fb-follow {{custom_css}}" data-href="{{facebook_page_url}}" {% if not (__SELF__.options['width'] is empty) %}data-width="{{__SELF__.options['width']}}"{% endif %} data-colorscheme="{{color}}" data-layout="{{layout}}" data-show-faces="{{show_faces}}"></div>
+{% else %}
+<div style="text-align: center;">
+    <span style="color:red;font-weight: bold;">
+        Error : facebook follow button cannot be displayed. <br>
+        You have to set up an URL or your facebook page URL in October CMS settings
+    </span>
+</div>
+{% endif %}

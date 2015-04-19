@@ -1,0 +1,46 @@
+{% if not (__SELF__.options['facebook_page_url'] is empty) %}
+{% set facebook_page_url = __SELF__.options['facebook_page_url'] %}
+{% else %}
+{% set facebook_page_url = __SELF__.faceBookPage %}
+{% endif %}
+
+{% if not (__SELF__.options['width'] is empty) %}
+{% set width = __SELF__.options['width'] %}
+{% else %}
+{% set width = '280' %}
+{% endif %}
+
+{% if __SELF__.options['hide_cover_photo'] %}
+{% set hide_cover_photo = 'true' %}
+{% else %}
+{% set hide_cover_photo = 'false' %}
+{% endif %}
+
+{% if __SELF__.options['show_friends_faces'] %}
+{% set show_friends_faces = 'true' %}
+{% else %}
+{% set show_friends_faces = 'false' %}
+{% endif %}
+
+{% if __SELF__.options['show_page_posts'] %}
+{% set show_page_posts = 'true' %}
+{% else %}
+{% set show_page_posts = 'false' %}
+{% endif %}
+
+{% if not (__SELF__.options['custom_css'] is empty) %}
+{% set custom_css = __SELF__.options['custom_css'] %}
+{% else %}
+{% set custom_css = '' %}
+{% endif %}
+
+{% if not (facebook_page_url is empty) %}
+<div class="fb-page {{custom_css}}" data-href="{{facebook_page_url}}" data-width="{{width}}" {% if not (__SELF__.options['height'] is empty) %}data-height="{{__SELF__.options['height']}}"{% endif %} data-hide-cover="{{hide_cover_photo}}" data-show-facepile="{{show_friends_faces}}" data-show-posts="{{show_page_posts}}"><div class="fb-xfbml-parse-ignore"><blockquote cite="{{facebook_page_url}}"><a href="{{facebook_page_url}}">{{facebook_page_url}}</a></blockquote></div></div>
+{% else %}
+<div style="text-align: center;">
+    <span style="color:red;font-weight: bold;">
+        Error : facebook box cannot be displayed. <br> 
+        You have to set up your facebook page URL in October CMS settings
+    </span>
+</div>
+{% endif %}

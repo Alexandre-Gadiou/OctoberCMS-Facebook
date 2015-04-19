@@ -1,0 +1,17 @@
+{% if not (__SELF__.options['custom_css'] is empty) %}
+{% set custom_css = __SELF__.options['custom_css'] %}
+{% else %}
+{% set custom_css = '' %}
+{% endif %}
+
+{% if not (__SELF__.options['post_url'] is empty) %}
+<div class="fb-post {{custom_css}}" data-href="{{__SELF__.options['post_url']}}" {% if not (__SELF__.options['width'] is empty) %}data-width="{{__SELF__.options['width']}}"{% endif %}>   
+</div>
+{% else %}
+<div style="text-align: center;">
+    <span style="color:red;font-weight: bold;">
+        Error : facebook post cannot be displayed. <br> 
+        You have to set up the post URL
+    </span>
+</div>
+{% endif %}

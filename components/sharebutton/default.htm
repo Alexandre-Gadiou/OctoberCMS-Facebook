@@ -1,0 +1,22 @@
+{% if not (__SELF__.options['facebook_page_url'] is empty) %}
+{% set facebook_page_url = __SELF__.options['facebook_page_url'] %}
+{% else %}
+{% set facebook_page_url = __SELF__.faceBookPage %}
+{% endif %}
+
+{% if not (__SELF__.options['custom_css'] is empty) %}
+{% set custom_css = __SELF__.options['custom_css'] %}
+{% else %}
+{% set custom_css = '' %}
+{% endif %}
+
+{% if not (facebook_page_url is empty) %}
+<div class="fb-share-button {{custom_css}}" data-href="{{ facebook_page_url }}" data-layout="{{ __SELF__.options['layout'] }}"></div>
+{% else %}
+<div style="text-align: center;">
+    <span style="color:red;font-weight: bold;">
+        Error : facebook share button cannot be displayed. <br>
+        You have to set upan URL or your facebook page URL in October CMS settings
+    </span>
+</div>
+{% endif %}

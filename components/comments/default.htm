@@ -1,0 +1,20 @@
+{% if not (__SELF__.options['page_url'] is empty) %}
+{% set page_url = __SELF__.options['page_url'] %}
+{% endif %}
+
+{% if not (__SELF__.options['custom_css'] is empty) %}
+{% set custom_css = __SELF__.options['custom_css'] %}
+{% else %}
+{% set custom_css = '' %}
+{% endif %}
+
+{% if not (page_url is empty) %}
+<div class="fb-comments {{custom_css}}" data-href="{{page_url}}" {% if not (__SELF__.options['width'] is empty) %}data-width="{{__SELF__.options['width']}}"{% endif %} data-numposts="{{__SELF__.options['posts_number']}}" data-colorscheme="{{__SELF__.options['color']}}"></div>
+{% else %}
+<div style="text-align: center;">
+    <span style="color:red;font-weight: bold;"> 
+        Error : facebook comments box cannot be displayed. <br>
+        You have to set up the url of the page to comment
+    </span>
+</div>
+{% endif %}

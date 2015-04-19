@@ -1,0 +1,24 @@
+{% if __SELF__.options['fullscreen'] %}
+{% set fullscreen = 'true' %}
+{% else %}
+{% set fullscreen = 'false' %}
+{% endif %}
+
+{% if not (__SELF__.options['custom_css'] is empty) %}
+{% set custom_css = __SELF__.options['custom_css'] %}
+{% else %}
+{% set custom_css = '' %}
+{% endif %}
+
+{% if not (__SELF__.options['video_url'] is empty) %}
+<div class="fb-video {{custom_css}}" data-href="{{ __SELF__.options['video_url'] }}"  
+     data-allowfullscreen="{{fullscreen}}" {% if not (__SELF__.options['width'] is empty) %}data-width="{{__SELF__.options['width']}}"{% endif %}>
+</div>
+{% else %}
+<div style="text-align: center;">
+    <span style="color:red;font-weight: bold;">
+        Error : facebook video cannot be displayed. <br> 
+        You have to set up the video URL
+    </span>
+</div>
+{% endif %}
