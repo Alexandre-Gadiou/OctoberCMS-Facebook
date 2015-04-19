@@ -1,16 +1,14 @@
 OctoberCMS Facebook Plugin
-========================================
+==================================
 
-=====================================================
-==================== INSTALLATION ===================
-=====================================================
+========== INSTALLATION ==========
 
 2 methods exist to install this plugin
 
 
 1) Install from github
 
-- Download the plugin
+- Download the plugin https://github.com/Alexandre-Gadiou/OctoberCMS-Facebook
 - Unzip the archive in plugins folder of october CMS
 - Open October CMS settings in the backend GUI (http://localhost:8080/backend/system/updates)
 - Click on Check for updates and force to update.
@@ -21,9 +19,7 @@ OctoberCMS Facebook Plugin
 - Type in the search input : Algad.Facebook, then install the plugin
 
 
-=====================================================
-==================== PLUGIN INFO ====================
-=====================================================
+========== PLUGIN INFO ==========
 
 After the installation process, you will find new facebook components in your CMS area.
 It can be added to any page, layout or partial ... 
