@@ -143,7 +143,7 @@ Components properties
   * URL &rarr; URL to comment on
   * Width &rarr; 300 for 300px
   * Number of posts
-  * Color Scheme 
+  * Color scheme 
 	  * light
 	  * dark
   * Css &rarr; Customize the component with a CSS class
