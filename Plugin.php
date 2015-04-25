@@ -18,7 +18,7 @@ class Plugin extends PluginBase
     public function pluginDetails()
     {
         return [
-            'name' => 'Facebook',
+            'name' => 'Facebook Components',
             'description' => 'Facebook components for October CMS',
             'author' => 'Alexandre GADIOU',
             'homepage' => 'http://alexandre-gadiou.appspot.com',
