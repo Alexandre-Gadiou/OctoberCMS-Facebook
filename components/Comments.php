@@ -35,7 +35,7 @@ class Comments extends AbstractFacebookComponent
                 'default' => '5'
             ],
             'color' => [
-                'title' => 'Color Scheme',
+                'title' => 'Color scheme',
                 'type' => 'dropdown',
                 'default' => 'light',
                 'options' => ['light' => 'light', 'dark' => 'dark']
