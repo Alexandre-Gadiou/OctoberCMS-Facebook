@@ -30,7 +30,7 @@ class FollowButton extends AbstractFacebookComponent
                 'options' => ['standard' => 'standard', 'box_count' => 'box_count', 'button_count' => 'button_count', 'button' => 'button']
             ],
             'color' => [
-                'title' => 'Color Scheme',
+                'title' => 'Color scheme',
                 'type' => 'dropdown',
                 'default' => 'light',
                 'options' => ['light' => 'light', 'dark' => 'dark']
