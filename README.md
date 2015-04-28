@@ -20,7 +20,7 @@ Installation
 
 1) Install with October CMS backend GUI
 - Go to the plugin page installation in OctoberCMS : http://localhost:8888/backend/system/updates/install
-- Type in the search input : Algad.FacebookComponents, then install the plugin
+- Type in the search input : Algad.Facebook, then install the plugin
 
 2) Install from github
 - Download the plugin https://github.com/Alexandre-Gadiou/OctoberCMS-Facebook
