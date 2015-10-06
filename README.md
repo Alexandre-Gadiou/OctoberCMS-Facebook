@@ -13,6 +13,9 @@ This plugin provides the facebook components below :
 - embedded video
 - embedded post
 
+![alt text](https://github.com/Alexandre-Gadiou/OctoberCMS-Facebook/blob/master/doc/facebook_components_list.png?raw=true "Facebook components list")
+
+
 Installation
 ------------
 
@@ -67,6 +70,9 @@ The integration works via the following code:
 ```
 {% component 'alias' %}
 ```
+
+![alt text](https://github.com/Alexandre-Gadiou/OctoberCMS-Facebook/blob/master/doc/facebook_components_integration.png?raw=true "Facebook components integration in october CMS")
+
 
 Components properties
 ---------------------
