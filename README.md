@@ -129,6 +129,7 @@ Components properties
   * URL &rarr; facebook page url
   * Width &rarr; 500 for 500px
   * Height &rarr; 200 for 200px
+  * Tabs &rarr; "timeline,events,messages" will show 3 tabs
   * Hide cover photo (on/off)
   * Show friends faces (on/off)
   * Show page posts (on/off)
