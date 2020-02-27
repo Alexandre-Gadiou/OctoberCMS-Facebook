@@ -33,6 +33,12 @@ class PageBox extends AbstractFacebookComponent
                 'description' => 'Box height',
                 'type' => 'string'
             ],
+            'tabs' => [
+                'title' => 'Tabs',
+                'description' => 'You can have multiple tabs : timeline,events,messages',
+                'type' => 'string',
+                'default' => ''
+            ],
             'hide_cover_photo' => [
                 'title' => 'Hide cover photo',
                 'description' => 'Hide facebook page cover photo',

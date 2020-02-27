@@ -35,7 +35,8 @@
 {% endif %}
 
 {% if not (facebook_page_url is empty) %}
-<div class="fb-page {{custom_css}}" data-href="{{facebook_page_url}}" data-width="{{width}}" {% if not (__SELF__.options['height'] is empty) %}data-height="{{__SELF__.options['height']}}"{% endif %} data-hide-cover="{{hide_cover_photo}}" data-show-facepile="{{show_friends_faces}}" data-show-posts="{{show_page_posts}}"><div class="fb-xfbml-parse-ignore"><blockquote cite="{{facebook_page_url}}"><a href="{{facebook_page_url}}">{{facebook_page_url}}</a></blockquote></div></div>
+<div class="fb-page {{custom_css}}" data-href="{{facebook_page_url}}" data-width="{{width}}" {% if not (__SELF__.options['height'] is empty) %}data-height="{{__SELF__.options['height']}}"{% endif %} data-hide-cover="{{hide_cover_photo}}" data-show-facepile="{{show_friends_faces}}" data-show-posts="{{show_page_posts}}" {% if not (__SELF__.options['tabs'] is empty) %} data-tabs="{{__SELF__.options['tabs']}}" {% endif %} data-adapt-container-width="false"><blockquote class="fb-xfbml-parse-ignore" cite="{{facebook_page_url}}"><a href="{{facebook_page_url}}">{{facebook_page_url}}</a></blockquote></div>
+
 {% else %}
 <div style="text-align: center;">
     <span style="color:red;font-weight: bold;">
